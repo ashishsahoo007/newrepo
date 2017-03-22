@@ -30,17 +30,17 @@ public class FirstTest {
 	     capabilities.setCapability("appPackage", "com.flipkart.android");
 		 capabilities.setCapability("appActivity", "com.flipkart.android.SplashActivity");
 		
-//jfdjgffasf
+        //jfdjgffasf
         driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 		// 1. VERIFY WHETHER HOME PAGE IS LOADED
 		//driver.findElement(By.id("com.flipkart.android:id/btn_skip")).click();
-		if(driver.findElement(By.name("Home"))!= null)
-        {
-		System.out.println("Element HOME is Present and it means page is loaded ");
-		}else{
-		System.out.println("Element is Absent");
-		}
+		//if(driver.findElement(By.name("Home"))!= null)
+       // {
+		//System.out.println("Element HOME is Present and it means page is loaded ");
+		//}else{
+		//System.out.println("Element is Absent");
+		//}
   // 2.  CLICK ON MENU BUTTON 
 		driver.findElement(By.className("android.widget.ImageButton")).click();
   // 3. VERIFY CATEGORIES PRESENT

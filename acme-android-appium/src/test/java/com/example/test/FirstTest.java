@@ -20,6 +20,9 @@ public class FirstTest {
 	@Test
 	public  void sample() throws MalformedURLException, InterruptedException
 	{
+		
+		Thread.sleep(150000);
+		
          RemoteWebDriver driver;
 	     DesiredCapabilities capabilities =new DesiredCapabilities();
 		 capabilities.setCapability("automationName", "Appium");
@@ -30,7 +33,7 @@ public class FirstTest {
 	     capabilities.setCapability("appPackage", "com.flipkart.android");
 		 capabilities.setCapability("appActivity", "com.flipkart.android.SplashActivity");
 		
-        //jfdjgffasf
+        //jfdjgffasf	
         driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 		// 1. VERIFY WHETHER HOME PAGE IS LOADED
@@ -41,7 +44,18 @@ public class FirstTest {
 		//}else{
 		//System.out.println("Element is Absent");
 		//}
-  // 2.  CLICK ON MENU BUTTON 
+  // 2.  CLICK ON MENU BUTTON
+		/*WebElement e=driver.findElement(By.className("android.widget.ImageButton"));
+		{
+	        do
+	        {
+	            driver.LongPress(e);
+	            driver.PressBackspaceKey();
+
+	        } while (element.Text != string.Empty);
+
+	        element.SendKeys(text);
+	    }*/
 		driver.findElement(By.className("android.widget.ImageButton")).click();
   // 3. VERIFY CATEGORIES PRESENT
 		Thread.sleep(20000);

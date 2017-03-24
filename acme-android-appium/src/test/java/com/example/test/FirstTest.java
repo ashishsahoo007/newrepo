@@ -23,7 +23,7 @@ public class FirstTest {
 	public  void sample() throws MalformedURLException, InterruptedException
 	{
 		
-		Thread.sleep(150000);
+	
 		
          AndroidDriver driver;
 	     DesiredCapabilities capabilities =new DesiredCapabilities();
@@ -58,9 +58,9 @@ public class FirstTest {
 
 	        element.SendKeys(text);
 	    }*/
-		driver.findElement(By.xpath("//android.widget.ImageButton[@index='1']")).click();
+		//driver.findElement(By.xpath("//android.widget.ImageButton[@index='1']")).click();
 
-		driver.findElement(By.className("android.widget.ImageButton")).click();
+		/*driver.findElement(By.className("android.widget.ImageButton")).click();
   // 3. VERIFY CATEGORIES PRESENT
 		Thread.sleep(20000);
 		if(driver.findElement(By.name("Electronics"))!= null)
@@ -97,7 +97,7 @@ public class FirstTest {
 		}else{
 		System.out.println("Element is Absent");
 		}
-
+*/
 		
          
        

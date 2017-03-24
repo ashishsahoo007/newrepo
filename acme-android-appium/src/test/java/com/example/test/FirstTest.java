@@ -15,6 +15,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import io.appium.java_client.android.AndroidDriver;
+
 public class FirstTest {
 	
 	@Test
@@ -23,7 +25,7 @@ public class FirstTest {
 		
 		Thread.sleep(150000);
 		
-         RemoteWebDriver driver;
+         AndroidDriver driver;
 	     DesiredCapabilities capabilities =new DesiredCapabilities();
 		 capabilities.setCapability("automationName", "Appium");
 		 capabilities.setCapability("platformName", "Android");
@@ -34,7 +36,7 @@ public class FirstTest {
 		 capabilities.setCapability("appActivity", "com.flipkart.android.SplashActivity");
 		
         //jfdjgffasf	
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
+        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 		// 1. VERIFY WHETHER HOME PAGE IS LOADED
 		//driver.findElement(By.id("com.flipkart.android:id/btn_skip")).click();

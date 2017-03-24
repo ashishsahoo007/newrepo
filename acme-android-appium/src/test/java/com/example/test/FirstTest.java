@@ -56,6 +56,8 @@ public class FirstTest {
 
 	        element.SendKeys(text);
 	    }*/
+		driver.findElement(By.xpath("//android.widget.ImageButton[@index='1']")).click();
+
 		driver.findElement(By.className("android.widget.ImageButton")).click();
   // 3. VERIFY CATEGORIES PRESENT
 		Thread.sleep(20000);
